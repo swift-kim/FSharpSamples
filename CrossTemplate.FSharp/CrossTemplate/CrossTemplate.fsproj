@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="CrossTemplate.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Tizen.NET" Version="5.0.0.14629" />
+    <PackageReference Include="Xamarin.Forms" Version="3.5.0.274416" />
+  </ItemGroup>
+
+</Project>

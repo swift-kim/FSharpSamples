@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>tizen50</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>None</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="StopWatch.xaml.fs" />
+    <Compile Include="LapsPage.xaml.fs" />
+    <Compile Include="StopWatchApplication.xaml.fs" />
+    <Compile Include="WindowExtension.fs" />
+    <Compile Include="XStopWatch.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="LapsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="StopWatch.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="StopWatchApplication.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="lib\**" />
+    <Content Include="res\**" />
+    <Content Include="shared\**" />
+    <Content Include="tizen-manifest.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Tizen.NET" Version="5.0.0.14629">
+      <ExcludeAssets>Runtime</ExcludeAssets>
+    </PackageReference>
+    <PackageReference Include="Tizen.NET.Sdk" Version="1.0.1" />
+    <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.2.0" />
+  </ItemGroup>
+
+</Project>
